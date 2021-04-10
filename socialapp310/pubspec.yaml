@@ -78,5 +78,15 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: OpenSansCondensed
+      fonts:
+        - asset: fonts/OpenSansCondensed-Bold.ttf
+        - asset: fonts/OpenSansCondensed-Light.ttf
+        - asset: fonts/OpenSansCondensed-LightItalic.ttf
+
+
+
+
 
 
