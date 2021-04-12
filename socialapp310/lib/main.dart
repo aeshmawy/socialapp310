@@ -6,11 +6,11 @@ import 'package:socialapp310/routes/login.dart';
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
   routes: {
-    '/': (context) => SplashScreen(),
-    '/login': (context) => Login()
+    // '/': (context) => SplashScreen(),
+    // '/login': (context) => Login()
 
     // '/': (context) => Welcome(),
-    // '/': (context) => Login(),
+    '/': (context) => Login(),
     // '/signup': (context) => SignUp(),
 
   } ,
