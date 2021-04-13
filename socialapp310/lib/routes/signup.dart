@@ -286,10 +286,11 @@ class _SignUpState extends State<SignUp> {
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(vertical: 12.0),
 
-                                child: Text(
-                                  'Sign Up',
-                                  style: kButtonDarkTextStyle,
-                                ),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 12.0),
+                              child: Text(
+                                'NEXT',
+                                style: kButtonDarkTextStyle,
                               ),
                               style: OutlinedButton.styleFrom(
                                 shape: RoundedRectangleBorder(
@@ -313,4 +314,3 @@ class _SignUpState extends State<SignUp> {
     );
   }
 }
-
