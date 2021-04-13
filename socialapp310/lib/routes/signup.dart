@@ -253,46 +253,51 @@ class _SignUpState extends State<SignUp> {
                       children: <Widget>[
                         Expanded(
                           flex: 1,
-                          child: OutlinedButton(
-                            onPressed: () {
+                          child: Container(
+                            width: 60.0,
+                            child:OutlinedButton(
+                              onPressed: () {
 
-                              if(_formKey.currentState.validate()) {
-                                _formKey.currentState.save();
+                                if(_formKey.currentState.validate()) {
+                                  _formKey.currentState.save();
 
-                                if(password != password2) {
-                                  showAlertDialog("Error", "Passwords don't match");
-                                }
-                                else {
-                                  if (_formKey.currentState.validate()) {
-                                    _formKey.currentState.save();
-                                    // if all are valid then go to success screen
-                                    //signUpUser();
-
-                                    Navigator.pushNamed(context, '/displayallproducts');
+                                  if(password != password2) {
+                                    showAlertDialog("Error", "Passwords don't match");
                                   }
+                                  else {
+                                    if (_formKey.currentState.validate()) {
+                                      _formKey.currentState.save();
+                                      // if all are valid then go to success screen
+                                      //signUpUser();
+
+                                      Navigator.pushNamed(context, '/signupfinish');
+                                    }
+                                  }
+                                  //
+                                  setState(() {
+                                    attemptCount += 1;
+                                  });
+
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(SnackBar(content: Text('Signing up')));
                                 }
-                                //
-                                setState(() {
-                                  attemptCount += 1;
-                                });
+                              },
 
-                                ScaffoldMessenger.of(context)
-                                    .showSnackBar(SnackBar(content: Text('Signing up')));
-                              }
-                            },
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 12.0),
 
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 12.0),
-                              child: Text(
-                                'Sign Up',
-                                style: kButtonDarkTextStyle,
+                                child: Text(
+                                  'Sign Up',
+                                  style: kButtonDarkTextStyle,
+                                ),
                               ),
-                            ),
-                            style: OutlinedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(40.0),
+                              style: OutlinedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(40.0),
+
+                                ),
+                                backgroundColor: AppColors.darkpurple,
                               ),
-                              backgroundColor: AppColors.darkpurple,
                             ),
                           ),
                         ),

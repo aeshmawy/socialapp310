@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 4), () => Navigator.pushNamed(context, "/")); //TODO:ADD CONTEXT TO ONBOARDING SCREENS
+    Timer(Duration(seconds: 4), () => Navigator.pushNamed(context, "/welcome")); //TODO:ADD CONTEXT TO ONBOARDING SCREENS
   }
   @override
   Widget build(BuildContext context) {
